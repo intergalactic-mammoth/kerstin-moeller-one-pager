@@ -1,0 +1,209 @@
+@import "assets/fonts/graphik/fonts.css";
+@import "assets/fonts/BallingerMono/MyFontsWebfontsKit.css";
+
+:root{
+    background-color: #D8E2FF;
+
+    --font1 : 'Graphik Web', sans-serif;
+    --font2 : 'BallingerMono-Light';
+
+    font-size: 16px;
+}
+
+h1{
+    font-size: 4.5rem;
+    font-weight: 500;
+}
+
+body{
+    padding-right: 80px;
+    padding-bottom: 50px;
+    padding-left: 80px;
+}
+
+.ballinger{
+    font-family: var(--font2);
+    font-size: small;
+}
+.graphik{
+    font-family: var(--font1);
+}
+
+.brown{
+    color: #8B634B;
+}
+
+a {
+    color: #8B634B;
+    padding: 1em 1.5em;
+    text-decoration: none;  
+    border: 1.6px solid #8B634B;
+    border-radius: 50px;
+    padding: 7px;
+    padding-left: 40px;
+    padding-right: 40px;
+    
+}
+  
+  a:active {
+    background-color: black;
+  }
+
+
+.circle {
+    border-radius: 50%;
+    width: 20px;
+    height: 20px;
+    padding: 4px; 
+    background: #8B634B;
+    color: rgb(255, 255, 255);
+    text-align: center;
+    font: 16px Graphik Web, sans-serif;
+  }
+
+.hr {
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: #000000;
+ }
+
+/* .h1-font{
+    font-size: 80px;
+    font-weight: 500;
+} */
+
+.h2-font{
+    font-size: 25px;
+    font-weight: 500;
+}
+
+.text-font{
+    font-size: 20px;
+}
+
+.two-column-section{
+    display: grid;
+    grid-template-columns: 0.8fr 1fr;
+    column-gap: 100px;
+    margin-top: 80px;
+    margin-bottom: 80px;
+}
+
+.three-column-section{
+    display: grid;
+    grid-template-columns: 0.8fr 0.5fr 1fr;
+    margin-top: 80px;
+    margin-bottom: 80px;
+}
+
+.flex-row{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+ol {
+    
+    counter-reset: custom;
+    list-style-type: none;
+    padding: 0;
+    margin: 0px 20px;
+}
+
+ol li {
+    counter-increment: custom;
+    padding: 15px 0;
+    display: flex;
+    align-items: center;
+}
+ol li:before {
+    content: counters(custom, ".") " ";
+    font-family: Graphik Web ;
+    width: 30px;
+    height: 30px;
+    margin-right: 10px;
+    background: #8B634B;
+    color: #fff;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#kerstin-img {
+    height: 300px;
+    width: 220px;
+}
+
+#signature {
+    height: 90px;
+    width: 300px;
+}
+
+#ici {
+    height: 170px;
+    width: 170px;
+}
+
+#kerstin-heading {
+    margin-top: 80px;
+    margin-bottom: 80px;
+}
+
+#kontakt-space {
+    margin-top: 80px;
+}
+
+#title-space {
+    margin-bottom: 50px;
+}
+
+#footer-padding {
+    padding-bottom: 40px;
+}
+
+#display-desktop {
+    display: block;
+}
+
+@media screen and (max-width: 700px) {
+
+    h1{
+        font-size: 2.3rem;
+    }
+
+    .h2-font{
+        font-size: 1.5rem;
+        font-weight: 500;
+    }
+    
+    .text-font{
+        font-size: 1rem;
+    }
+
+    #display-desktop {display: none;}
+
+    body{
+        padding-right: 10px;
+        padding-bottom: 50px;
+        padding-left: 10px;
+    }
+
+    .two-column-section{
+        grid-template-columns: 1fr;
+        /* This needs to go to the 
+        elemnt instead of the container */
+        /* align-items: center;
+        justify-content: center; */
+        margin-top: 50px;
+        margin-bottom: 50px;
+    }
+    
+    .three-column-section{
+        grid-template-columns: 1fr;
+        margin-top: 50px;
+        margin-bottom: 50px;
+    }
+}

@@ -1,0 +1,28 @@
+/**
+ * @license
+ * MyFonts Webfont Build ID 4413920, 2022-03-03T07:38:40-0500
+ * 
+ * The fonts listed in this notice are subject to the End User License
+ * Agreement(s) entered into by the website owner. All other parties are 
+ * explicitly restricted from using the Licensed Webfonts(s).
+ * 
+ * You may obtain a valid license at the URLs below.
+ * 
+ * Webfont: BallingerMono-Light by Signal
+ * URL: https://www.myfonts.com/fonts/signal/ballinger-mono/light/
+ * Copyright: Copyright © 2018 by the Signal Type Foundry. All rights reserved.
+ * 
+ * 
+ * 
+ * © 2022 MyFonts Inc
+*/
+
+
+/* @import must be at top of file, otherwise CSS will not work */
+@import url("//hello.myfonts.net/count/4359e0");
+  
+@font-face {
+  font-family: "BallingerMono-Light";
+  src: url('font.woff2') format('woff2'), url('font.woff') format('woff');
+}
+
