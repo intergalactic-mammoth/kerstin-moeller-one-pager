@@ -11,14 +11,79 @@
 }
 
 h1{
-    font-size: 4.5rem;
+    font-size: clamp(16px, 4.5rem, 5vw);
+    font-weight: 500;
+}
+
+h2{
+    font-size: clamp(16px, 25px, 1.5rem);
     font-weight: 500;
 }
 
 body{
-    padding-right: 80px;
-    padding-bottom: 50px;
-    padding-left: 80px;
+    padding: 0;
+    margin: 0;
+    border: 0;
+}
+
+a {
+    color: #8B634B;
+    text-decoration: none;  
+    transition: all 0.2s ease-in;
+}
+  
+a:active, a:hover{
+  color: black;
+}
+
+ol {
+    
+    counter-reset: custom;
+    list-style: none;
+    padding: 0;
+    margin: 0px 20px;
+    width: 100%;
+}
+
+ol li {
+    counter-increment: custom;
+    padding: 15px;
+    display: flex;
+    /* flex-wrap: wrap; */
+    /* position: relative; */
+    align-items: center;
+}
+ol li:before {
+    content: counters(custom, ".") " ";
+    font-family: Graphik Web;
+    position: absolute;
+    left: 48%;
+    width: 30px;
+    height: 30px;
+    margin-right: 10px;
+    background: #8B634B;
+    color: #fff;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* @supports (grid-template-columns: subgrid) {
+    ol.subgrid {
+      display: grid;
+      grid-template-columns: min-content 1fr;
+    }
+    ol.subgrid li {
+      grid-column: 1 / -1;
+      display: grid;
+      grid-template-columns: subgrid;
+      grid-gap: 0.5rem; 
+    }
+} */
+
+footer{
+    margin-bottom: 2rem;
 }
 
 .ballinger{
@@ -33,21 +98,25 @@ body{
     color: #8B634B;
 }
 
-a {
-    color: #8B634B;
-    padding: 1em 1.5em;
-    text-decoration: none;  
+.big-font{
+    font-size: 25px;
+    font-weight: 500;
+}
+
+.align-right{
+    text-align: right;
+}
+.align-left{
+    text-align: left;
+}
+
+.button-look{
     border: 1.6px solid #8B634B;
     border-radius: 50px;
-    padding: 7px;
-    padding-left: 40px;
-    padding-right: 40px;
-    
+    padding: 0.4em;
+    width: 21ch;
+    margin-bottom: 0.5em;
 }
-  
-  a:active {
-    background-color: black;
-  }
 
 
 .circle {
@@ -66,16 +135,6 @@ a {
     margin-left: auto;
     margin-right: auto;
     background-color: #000000;
- }
-
-/* .h1-font{
-    font-size: 80px;
-    font-weight: 500;
-} */
-
-.h2-font{
-    font-size: 25px;
-    font-weight: 500;
 }
 
 .text-font{
@@ -86,13 +145,14 @@ a {
     display: grid;
     grid-template-columns: 0.8fr 1fr;
     column-gap: 100px;
-    margin-top: 80px;
-    margin-bottom: 80px;
+    margin-top: 3em;
+    margin-bottom: 3em;
+    width: 100%;
 }
 
 .three-column-section{
     display: grid;
-    grid-template-columns: 0.8fr 0.5fr 1fr;
+    grid-template-columns: 0.8fr 0.8fr 1fr;
     margin-top: 80px;
     margin-bottom: 80px;
 }
@@ -104,37 +164,29 @@ a {
     align-items: center;
 }
 
-ol {
-    
-    counter-reset: custom;
-    list-style-type: none;
-    padding: 0;
-    margin: 0px 20px;
+.flex-column{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
-ol li {
-    counter-increment: custom;
-    padding: 15px 0;
-    display: flex;
-    align-items: center;
+.small-text{
+    font-size: 0.9rem;
 }
-ol li:before {
-    content: counters(custom, ".") " ";
-    font-family: Graphik Web ;
-    width: 30px;
-    height: 30px;
-    margin-right: 10px;
-    background: #8B634B;
-    color: #fff;
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+
+.black{
+    color: rgb(48, 48, 48);
+}
+
+#content-wrapper{
+    width: clamp( 360px, 90% , 1600px);
+    /* overflow: hidden; */
 }
 
 #kerstin-img {
-    height: 300px;
-    width: 220px;
+    max-height: 300px;
+    width: auto;
 }
 
 #signature {
@@ -143,13 +195,10 @@ ol li:before {
 }
 
 #ici {
+    position: relative;
+    /* left: 1%; */
     height: 170px;
     width: 170px;
-}
-
-#kerstin-heading {
-    margin-top: 80px;
-    margin-bottom: 80px;
 }
 
 #kontakt-space {
@@ -160,22 +209,18 @@ ol li:before {
     margin-bottom: 50px;
 }
 
-#footer-padding {
-    padding-bottom: 40px;
+#footer-div{
+    gap: 1rem;
 }
 
-#display-desktop {
-    display: block;
-}
-
-@media screen and (max-width: 700px) {
+@media screen and (max-width: 860px) {
 
     h1{
-        font-size: 2.3rem;
+        font-size: 9vw;
     }
 
-    .h2-font{
-        font-size: 1.5rem;
+    h2{
+        font-size: clamp(16px, 4vw, 1.5rem);
         font-weight: 500;
     }
     
@@ -183,7 +228,9 @@ ol li:before {
         font-size: 1rem;
     }
 
-    #display-desktop {display: none;}
+    #display-desktop {
+        display: none;
+    }
 
     body{
         padding-right: 10px;
@@ -191,10 +238,14 @@ ol li:before {
         padding-left: 10px;
     }
 
+    ol li:before {
+        left: 5.5%;
+    }
+
     .two-column-section{
         grid-template-columns: 1fr;
         /* This needs to go to the 
-        elemnt instead of the container */
+        element instead of the container */
         /* align-items: center;
         justify-content: center; */
         margin-top: 50px;

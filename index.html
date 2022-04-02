@@ -10,8 +10,15 @@
     <link rel="stylesheet" href="style.css">
 </head>
 
-<body>
-    <div id="content-wrapper">
+<body class="flex-column">
+    <div class="flex-column" id="content-wrapper">
+        <div class="two-column-section">
+            <p class="graphik brown">
+                Kerstin Möller <br>
+                NLP-Master-Coach, ICI zertifiziert
+            </p>
+            <p></p>
+        </div>
         <header class="two-column-section brown">
             <div class="graphik">
                 <h1>Coaching <br> für</h1>
@@ -21,9 +28,7 @@
 
             </div>
             <div>
-                <p id="kerstin-heading" class="graphik">Kerstin Möller <br>
-                    NLP-Master-Coach, ICI zertifiziert</p>
-                <h1 class="graphik">Persönlichkeits <br> entwicklung</h1>
+                <h1 class="graphik align-right" style="margin-top:10rem;">Persönlichkeits <br> entwicklung</h1>
             </div>
         </header>
 
@@ -31,24 +36,21 @@
 
         <section class="two-column-section" id="angebot">
             <div class="graphik">
-                <h2 class="h2-font">Angebot</h2>
-                <p class="brown h2-font">Mein Coaching-Angebot richtet 
+                <h2>Angebot</h2>
+                <h2 class="brown">Mein Coaching-Angebot richtet 
                     sich an Erwachsene und begleitet 
                     Sie auf Ihrem Weg, Ihr eigenes 
                     Potential zu stärken, indem Sie:
+                </h2>
             </div>
-            <div class="ballinger brown text-font flex-row">
+            <div class="ballinger brown text-font">
                 <ol>
-                  <li>Konkrete Probleme und Konflikte <br> lösen</li>
-                  <li>Berufliche und private Krisen <br> bewältigen</li>
-                  <li>Die Vergangenheit integrieren: <br>
-                    Blockaden überwinden, alte Muster <br>
-                    erkennen und verändern</li>
+                  <li>Konkrete Probleme und Konflikte lösen</li>
+                  <li>Berufliche und private Krisen bewältigen</li>
+                  <li>Die Vergangenheit integrieren: Blockaden überwinden, alte Muster erkennen und verändern</li>
                   <li>Ressourcen und Stärken entdecken</li>
-                  <li>Ziele und Visionen formulieren <br>
-                    und erreichen</li>
-                 <li>Neue Lebensperspektiven <br>
-                    entwickeln</li>
+                  <li>Ziele und Visionen formulieren und erreichen</li>
+                 <li>Neue Lebensperspektiven entwickeln</li>
                 </ol>
               </div>
             <div>
@@ -59,8 +61,10 @@
         <hr class="hr">
 
         <section class="three-column-section" id="methoden">
-            <h2 class="graphik h2-font">Methoden</h2>
-            <img id="ici" src="assets/ici.png" alt="">
+            <h2 class="graphik">Methoden</h2>
+            <div class="flex-column">
+                <img id="ici" src="assets/ici.png" alt="">
+            </div>
             <div class="ballinger brown text-font">
                 <p>Mein Gesprächscoaching beruht auf 
                     der Ausbildung zum NLP-Master-Coach, 
@@ -75,7 +79,7 @@
 
         <section class="two-column-section" id="kontakt">
             <div>
-                <h2 id="title-space" class="graphik h2-font">Kontakt</h2>
+                <h2 id="title-space" class="graphik">Kontakt</h2>
                 <img  id="kerstin-img" src="assets\kerstin.png" alt="Kerstin-Moeller-profile">
             </div>
             <div class="ballinger text-font">
@@ -94,31 +98,37 @@
 
         </section>
 
-        <footer>
-
-            <div class="two-column-section">
-                <div class="graphik brown h2-font">
-                    <p>Coaching für <br>
+        <footer class="graphik brown">
+            <div class="two-column-section" id ="footer-div" >
+                <div>
+                    <h2>Coaching für <br>
                         Persönlichkeitsentwicklung <br>
-                        Kerstin Möller</p>
-                    <p>NLP-Master-Coach, ICI zertifiziert <br>
-                        Falkenweg 5, 82131 Gauting</p>
+                        Kerstin Möller</h2>
+                    <h2>NLP-Master-Coach, ICI zertifiziert <br>
+                        Falkenweg 5, 82131 Gauting</h2>
                 </div>
                 <div>
-                    <div id="footer-padding" class="graphik h2-font ">
-                        <a href="tel:+49 (0)176 430 199 73" class="button-style">+49 (0)176 430 199 73</a>
-                    </div>
-                    <div class="graphik h2-font ">
-                        <a href="mailto:info@coaching-moeller.de" class="button-style">info@coaching-moeller.de</a>
-                    </div>
+                    <h2 class="flex-column button-look">
+                        <a href="tel:+49 (0)176 430 199 73">+49 (0)176 430 199 73</a>
+                    </h2>
+                    <h2 class="flex-column button-look">
+                        <a href="mailto:info@coaching-moeller.de">info@coaching-moeller.de</a>
+                    </h2>
                 </div>
             </div>
-
-            
-
-
-            <div class="graphik brown">
-                <span>Impressum</span> <span>Datenschutz</span>
+            <div>
+                <details>
+                    <summary>Impressum</summary>
+                    <p class="small-text black">
+                        Blah bluh blah blog bloh
+                    </p>
+                </details> 
+                <details>
+                    <summary>Datenschutz</summary>
+                    <p>
+                        Blih bloh blobby bleh
+                    </p>
+                </details>
             </div>
 
         </footer>
