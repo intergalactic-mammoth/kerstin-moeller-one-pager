@@ -21,6 +21,7 @@ h2{
 }
 
 body{
+    padding: 0;
     margin: 0;
     border: 0;
 }
@@ -180,7 +181,8 @@ footer{
 
 #content-wrapper{
     width: clamp( 360px, 90% , 1600px);
-    /* overflow: hidden; */
+    /* padding-left:  4rem;
+    padding-right: 4rem; */
 }
 
 #kerstin-img {
@@ -212,6 +214,10 @@ footer{
     gap: 1rem;
 }
 
+#personlich-spacer{
+    margin-top: 10rem;
+}
+
 @media screen and (max-width: 860px) {
 
     h1{
@@ -231,10 +237,18 @@ footer{
         display: none;
     }
 
+    #personlich-spacer{
+        margin-top: 2rem;
+    }
+
     body{
         padding-right: 10px;
         padding-bottom: 50px;
         padding-left: 10px;
+    }
+
+    ol li{
+        padding-left: 2rem;
     }
 
     ol li:before {
@@ -243,10 +257,6 @@ footer{
 
     .two-column-section{
         grid-template-columns: 1fr;
-        /* This needs to go to the 
-        element instead of the container */
-        /* align-items: center;
-        justify-content: center; */
         margin-top: 50px;
         margin-bottom: 50px;
     }
