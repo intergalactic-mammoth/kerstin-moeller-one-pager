@@ -32,7 +32,7 @@ a {
     transition: all 0.2s ease-in;
 }
   
-a:active, a:hover{
+a:hover{
   color: black;
 }
 
@@ -221,11 +221,11 @@ footer{
 @media screen and (max-width: 860px) {
 
     h1{
-        font-size: 9vw;
+        font-size: 10vw;
     }
 
     h2{
-        font-size: clamp(16px, 4vw, 1.5rem);
+        font-size: clamp(16px, 6vw, 1.5rem);
         font-weight: 500;
     }
     
