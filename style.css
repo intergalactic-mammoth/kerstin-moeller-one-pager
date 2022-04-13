@@ -138,7 +138,7 @@ footer{
 }
 
 .text-font{
-    font-size: 20px;
+    font-size: 1.25rem;
 }
 
 .two-column-section{
@@ -180,7 +180,7 @@ footer{
 }
 
 #content-wrapper{
-    width: clamp( 360px, 90% , 1600px);
+    width: clamp( 280px, 90% , 1600px);
     /* padding-left:  4rem;
     padding-right: 4rem; */
 }
@@ -191,15 +191,16 @@ footer{
 }
 
 #signature {
-    height: 90px;
-    width: 300px;
+    max-width: 300px;
+    height: auto;
+
 }
 
 #ici {
     position: relative;
     /* left: 1%; */
-    height: 170px;
-    width: 170px;
+    max-width: 170px;
+    height: auto;
 }
 
 #kontakt-space {
@@ -218,6 +219,12 @@ footer{
     margin-top: 10rem;
 }
 
+#contact-details{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
 @media screen and (max-width: 860px) {
 
     h1{
@@ -225,9 +232,10 @@ footer{
     }
 
     h2{
-        font-size: clamp(16px, 6vw, 1.5rem);
-        font-weight: 500;
+        font-size: clamp(1rem, 6vw, 1.5rem);
     }
+
+
     
     .text-font{
         font-size: 1rem;
@@ -242,9 +250,9 @@ footer{
     }
 
     body{
-        padding-right: 10px;
+        padding-right: 2vw;
         padding-bottom: 50px;
-        padding-left: 10px;
+        padding-left: 2vw;
     }
 
     ol li{
@@ -265,5 +273,25 @@ footer{
         grid-template-columns: 1fr;
         margin-top: 50px;
         margin-bottom: 50px;
+    }
+}
+
+@media screen and (max-width:640px){
+    a{
+        font-size: 1rem;
+    }
+
+    h2{
+        font-size:1.2rem;
+    }
+
+    .button-look{
+        padding: 0.4em;
+        width: 18ch;
+        margin-bottom: 0.5em;
+    }
+
+    .text-font{
+        font-size: 1rem;
     }
 }
